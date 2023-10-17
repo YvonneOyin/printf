@@ -24,5 +24,8 @@ int print_str(va_list);
 int print_pcent(va_list);
 int print_int(va_list);
 int (*parse_formt(char fmt))(va_list);
+int print_bin(va_list);
+int _put(char *str);
+char *change(unsigned long int n, int base, int lcase);
 
 #endif /* _MAIN_H_ */

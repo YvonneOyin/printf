@@ -17,6 +17,7 @@ int (*parse_formt(char fmt))(va_list)
 		{'%', print_pcent},
 		{'d', print_int},
 		{'i', print_int},
+		{'b', print_bin},
 		{'\0', NULL}
 	};
 
