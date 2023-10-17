@@ -87,3 +87,32 @@ int print_int(va_list type)
 	}
 	return (len);
 }
+
+/**
+ * print_unsign_int - print unsigned integer
+ *
+ * @type: list of argument pointing to integer to be printed
+ *
+ * Return: number of integer printed
+ */
+int print_unsign_int(va_list type)
+{
+	unsigned int num = va_arg(type, unsigned int);
+	int div = 1, count = 0;
+
+	if (num < 1)
+		return (-1);
+
+	while (num / div > 9)
+	{
+		div = div * 10;
+	}
+
+	while (div != 0)
+	{
+		count = count + _putchar(num / div + '0');
+		num = num % div;
+		div = div / 10;
+	}
+	return (count);
+}

@@ -18,6 +18,7 @@ int (*parse_formt(char fmt))(va_list)
 		{'d', print_int},
 		{'i', print_int},
 		{'b', print_bin},
+		{'u', print_unsign_int},
 		{'\0', NULL}
 	};
 
