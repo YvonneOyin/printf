@@ -28,5 +28,6 @@ int print_bin(va_list);
 int _put(char *str);
 char *change(unsigned long int n, int base, int lcase);
 int print_unsign_int(va_list);
+int print_octal_int(va_list);
 
 #endif /* _MAIN_H_ */
