@@ -100,9 +100,6 @@ int print_unsign_int(va_list type)
 	unsigned int num = va_arg(type, unsigned int);
 	int div = 1, count = 0;
 
-	if (num < 1)
-		return (-1);
-
 	while (num / div > 9)
 	{
 		div = div * 10;

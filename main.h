@@ -5,6 +5,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+#define BUF_SIZE 1024
+
 /**
  * struct func - structure for print functions
  *
@@ -26,7 +28,6 @@ int print_int(va_list);
 int (*parse_formt(char fmt))(va_list);
 int print_bin(va_list);
 int _put(char *str);
-char *change(unsigned long int n, int base, int lcase);
 int print_unsign_int(va_list);
 int print_octal_int(va_list);
 int print_hex(va_list);
