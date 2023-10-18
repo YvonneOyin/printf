@@ -20,6 +20,7 @@ int (*parse_formt(char fmt))(va_list)
 		{'b', print_bin},
 		{'u', print_unsign_int},
 		{'o', print_octal_int},
+		{'x', print_hex},
 		{'\0', NULL}
 	};
 

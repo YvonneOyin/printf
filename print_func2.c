@@ -71,3 +71,47 @@ int print_octal_int(va_list type)
 
 	return (count);
 }
+
+/**
+ * print_hex - prints unsigned hexadecimal integer
+ *
+ * @type: a variable list argument
+ *
+ * Return: number of printed integer
+ */
+int print_hex(va_list type)
+{
+	unsigned int num = va_arg(type, unsigned int);
+	char hex[32];
+	int count = 0, n, m;
+
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+
+	while (num > 0)
+	{
+		n = num % 16;
+		if (n < 10)
+		{
+			hex[count] = n + '0';
+		}
+
+		else
+		{
+			hex[count] = n - 10 + 'a';
+		}
+		num = num / 16;
+		count++;
+	}
+
+	m = count - 1;
+	while (m >= 0)
+	{
+		_putchar(hex[m]);
+		m--;
+	}
+	return (count);
+}
