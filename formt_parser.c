@@ -21,6 +21,7 @@ int (*parse_formt(char fmt))(va_list)
 		{'u', print_unsign_int},
 		{'o', print_octal_int},
 		{'x', print_hex},
+		{'X', print_hex_upper},
 		{'\0', NULL}
 	};
 
